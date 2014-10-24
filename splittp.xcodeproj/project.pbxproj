@@ -12,6 +12,12 @@
 		57489E1F18F78CA6005F540E /* libMagick++-6.Q16.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 57489E1E18F78CA6005F540E /* libMagick++-6.Q16.3.dylib */; };
 		5748A19818F79C0A005F540E /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5748A19718F79C0A005F540E /* libbz2.dylib */; };
 		5748A19A18F79C19005F540E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5748A19918F79C19005F540E /* libz.dylib */; };
+		5784F66318FBB941007744E5 /* Plist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5784F66118FBB941007744E5 /* Plist.cpp */; };
+		5784F66818FBB94B007744E5 /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5784F66618FBB94B007744E5 /* pugixml.cpp */; };
+		5784F67218FBB9C4007744E5 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5784F66D18FBB9C4007744E5 /* json_reader.cpp */; };
+		5784F67318FBB9C4007744E5 /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5784F66E18FBB9C4007744E5 /* json_value.cpp */; };
+		5784F67418FBB9C4007744E5 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5784F67018FBB9C4007744E5 /* json_writer.cpp */; };
+		5784F67718FBBEA0007744E5 /* Geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5784F67518FBBEA0007744E5 /* Geometry.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +41,17 @@
 		5748A19518F79A2F005F540E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5748A19718F79C0A005F540E /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
 		5748A19918F79C19005F540E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		5784F66118FBB941007744E5 /* Plist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plist.cpp; sourceTree = "<group>"; };
+		5784F66218FBB941007744E5 /* Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
+		5784F66518FBB94B007744E5 /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
+		5784F66618FBB94B007744E5 /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
+		5784F66718FBB94B007744E5 /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
+		5784F66A18FBB9C4007744E5 /* json_batchallocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_batchallocator.h; sourceTree = "<group>"; };
+		5784F66D18FBB9C4007744E5 /* json_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_reader.cpp; sourceTree = "<group>"; };
+		5784F66E18FBB9C4007744E5 /* json_value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_value.cpp; sourceTree = "<group>"; };
+		5784F67018FBB9C4007744E5 /* json_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_writer.cpp; sourceTree = "<group>"; };
+		5784F67518FBBEA0007744E5 /* Geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Geometry.cpp; sourceTree = "<group>"; };
+		5784F67618FBBEA0007744E5 /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +71,8 @@
 		57489E0818F78851005F540E = {
 			isa = PBXGroup;
 			children = (
+				5784F66918FBB9C4007744E5 /* lib_json */,
+				5784F66418FBB94B007744E5 /* pugixml */,
 				57489E1318F78851005F540E /* splittp */,
 				57489E1218F78851005F540E /* Products */,
 				57489E1D18F78B3B005F540E /* Frameworks */,
@@ -71,6 +90,10 @@
 		57489E1318F78851005F540E /* splittp */ = {
 			isa = PBXGroup;
 			children = (
+				5784F67518FBBEA0007744E5 /* Geometry.cpp */,
+				5784F67618FBBEA0007744E5 /* Geometry.h */,
+				5784F66118FBB941007744E5 /* Plist.cpp */,
+				5784F66218FBB941007744E5 /* Plist.h */,
 				57489E1418F78851005F540E /* main.cpp */,
 				57489E1618F78851005F540E /* splittp.1 */,
 			);
@@ -86,6 +109,28 @@
 				57489E1E18F78CA6005F540E /* libMagick++-6.Q16.3.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5784F66418FBB94B007744E5 /* pugixml */ = {
+			isa = PBXGroup;
+			children = (
+				5784F66518FBB94B007744E5 /* pugiconfig.hpp */,
+				5784F66618FBB94B007744E5 /* pugixml.cpp */,
+				5784F66718FBB94B007744E5 /* pugixml.hpp */,
+			);
+			path = pugixml;
+			sourceTree = "<group>";
+		};
+		5784F66918FBB9C4007744E5 /* lib_json */ = {
+			isa = PBXGroup;
+			children = (
+				5784F66A18FBB9C4007744E5 /* json_batchallocator.h */,
+				5784F66D18FBB9C4007744E5 /* json_reader.cpp */,
+				5784F66E18FBB9C4007744E5 /* json_value.cpp */,
+				5784F67018FBB9C4007744E5 /* json_writer.cpp */,
+			);
+			name = lib_json;
+			path = jsoncpp/src/lib_json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5784F67218FBB9C4007744E5 /* json_reader.cpp in Sources */,
+				5784F66818FBB94B007744E5 /* pugixml.cpp in Sources */,
+				5784F67318FBB9C4007744E5 /* json_value.cpp in Sources */,
+				5784F66318FBB941007744E5 /* Plist.cpp in Sources */,
+				5784F67718FBBEA0007744E5 /* Geometry.cpp in Sources */,
+				5784F67418FBB9C4007744E5 /* json_writer.cpp in Sources */,
 				57489E1518F78851005F540E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +276,8 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/ImageMagick-6/include",
 					/usr/local/lib,
+					"$(SRCROOT)/pugixml",
+					"$(SRCROOT)/jsoncpp/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -233,6 +286,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -247,6 +301,8 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/ImageMagick-6/include",
 					/usr/local/lib,
+					"$(SRCROOT)/pugixml",
+					"$(SRCROOT)/jsoncpp/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -255,6 +311,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
