@@ -72,6 +72,8 @@ void parseFrame(Image* texture,Json::Value& frameData,const std::string& outFile
     //get current image
     
     Image currentImage(*texture);
+    currentImage.quality(100);
+//    currentImage.type(TrueColorMatteType);
     
     currentImage.chop(Geometry(frame.x,frame.y));
     if (rotated) {
@@ -83,11 +85,18 @@ void parseFrame(Image* texture,Json::Value& frameData,const std::string& outFile
     
     Image orignalImage(Geometry(sourceSize.width,sourceSize.height),Color());
     
+    orignalImage.quality(100);
+    
+//    orignalImage.type(TrueColorMatteType);
+    
     DrawableCompositeImage img(colorX,colorY,currentImage);
     
     orignalImage.draw(img);
+
+    //fix png convert.force out png32
+    std::string png32File = std::string("png32:")+outFile;
     
-    orignalImage.write(outFile);
+    orignalImage.write(png32File);
 
 }
 
@@ -120,6 +129,13 @@ int main(int argc, char ** argv)
                 textureFileName=argv[3];
             }else{
                 textureFileName=metadata["textureFileName"].asString();
+                
+                std::string plistFile=argv[1];
+                size_t pos=plistFile.find_last_of("/");
+                if(pos!=std::string::npos){
+                    std::string plistPath=plistFile.substr(0,pos);
+                    textureFileName=plistPath+"/"+textureFileName;
+                }
             }
             
             if (textureFileName!="") {
